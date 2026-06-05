@@ -8,7 +8,7 @@ const PROJECTS = [
     category: 'Brand AI',
     color: '#c084fc',
     colorDim: 'rgba(192,132,252,0.1)',
-    videoFile: '/velour.mp4',
+    videoFile: 'https://youtube.com/embed/AujQQSorcEo?si=ihW2JE3vdw-kTnSv&rel=0',
     desc: 'Multi-LLM conversational chatbot embedded in the Velour brand. Switches between GPT-4, Claude, and Gemini based on query complexity.',
     problem: 'Brand needed 24/7 intelligent customer interaction without a support team.',
     tech: ['GPT-4', 'Claude', 'Gemini', 'React', 'WebSocket'],
@@ -20,7 +20,7 @@ const PROJECTS = [
     category: 'Instagram AI',
     color: '#f97316',
     colorDim: 'rgba(249,115,22,0.1)',
-    videoFile: '/zaiqa.mp4',
+    videoFile: 'https://youtube.com/embed/LccdhoEv2nQ?si=4A0pD1_zOTnvh_CJ&rel=0',
     desc: 'Full Instagram DM automation pipeline for food brand Zaiqa. Detects order intents, collects details, and confirms orders — fully automated.',
     problem: 'Manual DM replies were costing 3+ hours/day and missing sales opportunities.',
     tech: ['Python', 'Meta Graph API', 'GPT-4', 'n8n', 'PostgreSQL'],
@@ -32,7 +32,7 @@ const PROJECTS = [
     category: 'Computer Vision',
     color: '#60a5fa',
     colorDim: 'rgba(96,165,250,0.1)',
-    videoFile: '/roomstyling.mp4',
+    videoFile: 'https://youtube.com/embed/5JSpIxP9Xus?si=U5r5iSUQbiKRaJOg&rel=0',
     desc: 'Upload a photo of any room and receive multiple AI-generated styled versions. Custom pipeline from detection to generation to output.',
     problem: 'Interior designers and homeowners needed instant visual inspiration without hiring designers.',
     tech: ['Custom CV Pipeline', 'Python', 'DALL-E 3', 'FastAPI', 'React'],
@@ -101,21 +101,56 @@ function injectStyles(id, css) {
 
 function VideoPlayer({ src, color }) {
   return (
-    <div style={{ borderRadius: 12, overflow: 'hidden', border: `1px solid ${color}30`, background: '#000', marginTop: '1rem' }}>
-      <video
-        src={src}
-        controls
-        playsInline
-        style={{ width: '100%', display: 'block', maxHeight: 220, objectFit: 'cover' }}
-      />
+    <div style={{
+      borderRadius: 12,
+      overflow: 'hidden',
+      border: `1px solid ${color}30`,
+      background: '#000',
+      marginTop: '1rem',
+    }}>
+
+      {/* FIXED YOUTUBE BOX */}
       <div style={{
-        padding: '7px 12px', background: 'var(--bg2)',
-        display: 'flex', alignItems: 'center', gap: 7,
-        fontSize: '11px', color: 'var(--text3)', fontFamily: 'var(--font-mono)'
+        position: 'relative',
+        width: '100%',
+        paddingTop: '56.25%',
       }}>
-        <span style={{ width: 5, height: 5, borderRadius: '50%', background: color, display: 'inline-block' }} />
+        <iframe
+          src={src}
+          title="Project Demo"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+          style={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            width: '100%',
+            height: '100%',
+            border: 'none',
+          }}
+        />
+      </div>
+
+      {/* bottom label */}
+      <div style={{
+        padding: '7px 12px',
+        background: 'var(--bg2)',
+        display: 'flex',
+        alignItems: 'center',
+        gap: 7,
+        fontSize: '11px',
+        color: 'var(--text3)',
+        fontFamily: 'var(--font-mono)'
+      }}>
+        <span style={{
+          width: 5,
+          height: 5,
+          borderRadius: '50%',
+          background: color,
+        }} />
         demo walkthrough
       </div>
+
     </div>
   )
 }

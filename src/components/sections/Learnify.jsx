@@ -548,7 +548,7 @@ export default function Learnify() {
   paddingTop: '56.25%', // 16:9 ratio
 }}>
   <iframe
-    src="https://youtube.com/embed/CGh5sa7dB-8?si=stgbfDfdFnemHBDZ"
+    src="https://youtube.com/embed/WdOFSicC6FM?si=3_VzUn2qN49iOsck&rel=0"
     title="Learnify Demo"
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
     allowFullScreen
