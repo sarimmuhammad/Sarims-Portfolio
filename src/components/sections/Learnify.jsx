@@ -542,18 +542,26 @@ export default function Learnify() {
               background: '#000',
               boxShadow: '0 0 30px rgba(52,211,153,0.06)',
             }}>
-              <iframe
-  src="https://youtube.com/embed/CGh5sa7dB-8?si=stgbfDfdFnemHBDZ"
-  title="Learnify Demo"
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-  allowFullScreen
-  style={{
-    width: '100%',
-    height: '260px',
-    border: 'none',
-    display: 'block'
-  }}
-/>
+              <div style={{
+  position: 'relative',
+  width: '100%',
+  paddingTop: '56.25%', // 16:9 ratio
+}}>
+  <iframe
+    src="https://youtube.com/embed/CGh5sa7dB-8?si=stgbfDfdFnemHBDZ"
+    title="Learnify Demo"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowFullScreen
+    style={{
+      position: 'absolute',
+      top: 0,
+      left: 0,
+      width: '100%',
+      height: '100%',
+      border: 'none',
+    }}
+  />
+</div>
               <div style={{
                 padding: '8px 14px', background: 'rgba(10,18,14,0.7)',
                 display: 'flex', alignItems: 'center', gap: 8,
