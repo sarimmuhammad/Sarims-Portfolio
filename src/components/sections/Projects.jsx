@@ -3,6 +3,18 @@ import { gsap, revealOnScroll } from '../../lib/animations'
 
 const PROJECTS = [
   {
+    id: 'autoshorts',
+    name: 'AutoShorts AI',
+    category: 'Video AI Pipeline',
+    color: '#f43f5e',
+    colorDim: 'rgba(244,63,94,0.1)',
+    videoFile: 'https://youtube.com/embed/1jGVX_CO_8Q?si=ADyaW4iBITc4hEQT&rel=0',
+    desc: 'Open-source, fully self-hosted pipeline that transforms long-form videos into viral 9:16 short clips. Runs 100% locally — no cloud APIs, no subscriptions, full data privacy.',
+    problem: 'Creators needed an automated way to turn long videos into high-retention shorts without paying recurring SaaS fees or sending footage to third-party clouds.',
+    tech: ['Whisper', 'KeyBERT', 'VADER', 'FFmpeg', 'Python', 'Streamlit'],
+    metrics: ['100% local', 'Auto captions', 'Auto PDF reports'],
+  },
+  {
     id: 'velour',
     name: 'Velour Chatbot',
     category: 'Brand AI',
