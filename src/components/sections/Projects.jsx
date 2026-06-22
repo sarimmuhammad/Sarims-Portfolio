@@ -3,6 +3,18 @@ import { gsap, revealOnScroll } from '../../lib/animations'
 
 const PROJECTS = [
   {
+    id: 'codecelix',
+    name: 'CodeCelix Screener',
+    category: 'AI Hiring Tool',
+    color: '#22d3ee',
+    colorDim: 'rgba(34,211,238,0.1)',
+    videoFile: 'https://youtube.com/embed/HvKVB4tUYWc?si=5u5itZtCWhQW5Y8y&rel=0',
+    desc: 'AI-powered candidate screening platform. Parses CVs, auto-generates role-specific questions, scores candidates via LLM, and delivers instant shortlisting — end-to-end automated hiring.',
+    problem: 'Recruiters were spending 10+ hours per role manually reviewing CVs and conducting initial screenings — missing top talent and delaying hires.',
+    tech: ['FastAPI', 'Groq', 'Claude', 'Supabase', 'React', 'Python'],
+    metrics: ['Auto CV parse', 'LLM scoring', 'Instant shortlist'],
+  },
+  {
     id: 'autoshorts',
     name: 'AutoShorts AI',
     category: 'Video AI Pipeline',
